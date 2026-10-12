@@ -1,0 +1,36 @@
+{
+    "version": 1,
+    "name": "GameControls",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "0f9b1e22-97e4-451a-b231-5734f15f86a9",
+            "actions": [
+                {
+                    "name": "ChargeShot",
+                    "type": "Button",
+                    "id": "e483c0f2-3d3d-486f-988c-4ef4382258ee",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c9e94116-3159-4b07-b259-fa990fdda777",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChargeShot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
