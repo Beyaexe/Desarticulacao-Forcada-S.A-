@@ -7,7 +7,7 @@ public class CannonController : MonoBehaviour
     //O InputActionReference é o tipo da variável, indica que a variável vai guardar uma referência da ação do input system.
     [SerializeField] private float chargeSpeed = 1f;
     private float power = 0f;
-    [SerializeField] private float maxPower = 5f;
+    [SerializeField] private float maxPower = 50f;
 
 
     //Lançamento
@@ -42,8 +42,23 @@ public class CannonController : MonoBehaviour
         if (chargeAction.action.WasReleasedThisFrame()) //Quando solta
         {
             Debug.Log($"Potência acumulada: {power:F2}");
+            FireProjectile(power);
+
             power = 0f; //resetando a força
         }
     }
     
+    private void FireProjectile(float power)
+    {
+        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity); //Aqui nós criamos uma cópia do prefab na cena
+        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+
+        //direção
+        float cos = Mathf.Cos(shotAngle * Mathf.Deg2Rad);
+        float sin = Mathf.Sin(shotAngle * Mathf.Deg2Rad);
+
+        Vector2 direction = new Vector2(cos, sin);
+
+        rb.AddForce(direction * power, ForceMode2D.Impulse);
+    }
 }
