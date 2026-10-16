@@ -15,6 +15,26 @@
                     "interactions": "",
                     "initialStateCheck": false,
                     "priority": 0
+                },
+                {
+                    "name": "AimUp",
+                    "type": "Button",
+                    "id": "17c18aaa-b86c-4659-897d-ec40538d79a3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "AimDown",
+                    "type": "Button",
+                    "id": "36e6b406-2078-4e24-befb-79666b38c6c6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
@@ -26,6 +46,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "ChargeShot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "91927f61-ebe0-4ed8-9a66-21a925e89839",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AimUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7585b7f8-14fc-42e1-a16e-d641cc1d5d62",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AimDown",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
